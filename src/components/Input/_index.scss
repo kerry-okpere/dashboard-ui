@@ -1,0 +1,23 @@
+.input{
+  &_group{
+    
+  }
+  &_label{
+    @apply flex justify-between pb-2 text-sm w-full;
+    &-main{
+
+    }
+    &-alt{
+      @apply text-primary;
+    }
+  }
+  &_input{
+    @apply border border-gray-300 rounded-md w-full text-base flex items-center;
+    input{
+      @apply p-3 h-full w-full rounded-md outline-none;
+    }
+  }
+  &_icon{
+    @apply h-4 w-4 text-gray-400 mr-2 cursor-pointer;
+  }
+}
