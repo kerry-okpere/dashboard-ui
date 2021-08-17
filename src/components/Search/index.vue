@@ -1,7 +1,7 @@
 <template>
   <label class="flex text-gray-500 text-sm items-center">
     <SearchIcon class="h-4 w-4 mr-2"/>
-    <input class="h-full outline-none w-full placeholder-gray-500 py-4" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" type="search" placeholder="Search..."/>
+    <input class="h-full outline-none w-full placeholder-gray-500 py-5" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" type="search" placeholder="Search..."/>
   </label>
 </template>
 <script>

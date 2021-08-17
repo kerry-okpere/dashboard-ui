@@ -3,22 +3,26 @@
     <thead>
       <tr class="uppercase text-xxs border-b">
         <th class="py-3"><Checkbox v-model="selectAll"/></th>
-        <th class="font-medium">amount</th>
-        <th/>
-        <th class="font-medium text-left pl-2">Description</th>
-        <th class="font-medium">CUSTOMER</th>
-        <th class="font-medium">DATE</th>
+        <th class="font-medium text-left px-2">amount</th>
+        
+        <th class="font-medium text-left px-2">Description</th>
+        <th class="font-medium text-left">CUSTOMER</th>
+        <th class="font-medium text-left">DATE</th>
         <th/>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(data, index) in dataTable" :key="index" class="border-b text-gray-700">
-        <td class="py-3"><Checkbox v-model="data.selected"/></td>
-        <td class="text-sm text-gray-900">{{currency}}{{data.amount}}</td>
-        <td class="text-center"><Badge :title="data.status"/> </td>
-        <td class="text-xsm text-gray-500 font-normal text-left w-2/5">{{data.desc}}</td>
+        <td class="py-2.5"><Checkbox v-model="data.selected"/></td>
+        <td class="text-sm text-gray-900">
+          <div class="flex items-center">
+            <span class="mr-4 xl:mr-3 text-right w-4/12">{{currency}}{{data.amount}}</span>
+            <Badge :title="data.status" class="lg:w-11/20 xl:w-9/20"/>
+          </div>
+        </td>
+        <td class="text-xsm text-gray-500 font-normal text-left w-6/12">{{data.desc}}</td>
         <td class="text-sm font-normal w-44">
-          <div class="truncate w-40">{{data.customer}}lorehdjsjksksksjsjsjsj</div>
+          <div class="truncate w-40">{{data.customer}}</div>
         </td>
         <td class="text-sm font-normal">{{data.date}}</td>
         <td><DotsHorizontalIcon class="h-4 w-4"/></td>
@@ -32,7 +36,7 @@
         <Button type="outline" is-small :disabled="currentPage === 0">
           Previous
         </Button>
-        <Button type="outline" is-small :disabled="pages < max">
+        <Button type="outline" is-small>
           Next
         </Button>
       </div>
@@ -62,10 +66,7 @@ export default defineComponent({
   setup(props) {
     const currency = 'US$'
     const selectAll = false
-    const max = 16
     const currentPage = ref(0)
-    const pages = props.dataTable.length/2
-    // pages should be greater than 16
     
     // watch(() => {
     //   // if selectAll is true update all data selected = true 
@@ -73,9 +74,7 @@ export default defineComponent({
     return {
       currency,
       selectAll,
-      max,
       currentPage,
-      pages
     }
   },
 })

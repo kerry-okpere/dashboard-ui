@@ -3,7 +3,7 @@
     <div>
       <img src="../../assets/img/vector.svg" alt="logo" class="pb-12 "/>
 
-      <form @submit="handleSubmit"  class="shadow-secondary py-12 px-16 rounded">
+      <form @submit.prevent="handleSubmit"  class="shadow-secondary py-12 px-16 rounded">
         <div class="w-96">
           <h1 class="text-gray-800 text-2xl font-semibold py-4">Sign in to your account</h1>
           <div class="py-4">
@@ -17,7 +17,7 @@
             <p class="font-normal text-sm">Stay signed in for a week</p>
           </Checkbox>
 
-          <Button class="my-4 w-full">Continue</Button>
+          <Button class="my-4 w-full" @click="$router.push('/payments')">Continue</Button>
 
           <Link title="Use single sign-on (SSO) instead" class="block text-center py-4" />
         </div>
