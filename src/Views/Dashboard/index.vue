@@ -1,9 +1,8 @@
 <template>
   <div class="relative">
     <Menu class="hidden md:block w-1/5 fixed h-screen"/>
-    <div class="flex">
-      <div class="hidden md:block w-1/5 h-screen" />
-      <Payments class="md:w-4/5"/>
+    <div class="flex justify-end">
+      <Payments class="w-full md:w-4/5"/>
     </div>
   </div>
 </template>
