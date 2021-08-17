@@ -3,7 +3,7 @@
     <div>
       <img src="../../assets/img/vector.svg" alt="logo" class="pb-12 "/>
 
-      <form @submit.prevent="handleSubmit"  class="shadow-secondary py-12 px-16 rounded">
+      <form @submit.prevent="handleSubmit"  class="shadow-secondary py-10 px-16 rounded">
         <div class="w-96">
           <h1 class="text-gray-800 text-2xl font-semibold py-4">Sign in to your account</h1>
           <div class="py-4">
@@ -23,12 +23,14 @@
         </div>
       </form>
 
-      <p class="text-sm text-gray-700 py-4">Don’t have an account? <Link title="Sign up" /></p>
-      <ul class="list-disc flex w-full space-x-7 text-sm text-gray-600 py-2">
-        <li class="list-none">© Stripe</li>
-        <li>Contact</li>
-        <li>Privacy &amp; terms</li>
-      </ul>
+      <p class="text-sm text-gray-700 pt-6 pb-2">Don’t have an account? <Link title="Sign up" /></p>
+      <p class="text-sm text-gray-600 py-2 font-medium">
+        <span> © Stripe</span>
+        <span class="px-1">·</span>
+        <span>Contact</span>
+        <span class="px-1">·</span>
+        <span>Privacy &amp; terms</span>
+      </p>
     </div>
   </section>
 </template>
@@ -65,3 +67,4 @@ export default defineComponent({
   },
 })
 </script>
+
