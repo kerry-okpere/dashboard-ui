@@ -1,10 +1,10 @@
 <template>
   <section class="h-screen flex items-center justify-center">
     <div>
-      <img src="../../assets/img/vector.svg" alt="logo" class="pb-12 "/>
+      <img src="../../assets/img/vector.svg" alt="logo" class=" sm:pb-12"/>
 
-      <form @submit.prevent="handleSubmit"  class="shadow-secondary py-12 px-16 rounded">
-        <div class="w-96">
+      <form @submit.prevent="handleSubmit"  class="sm:shadow-secondary sm:py-12 sm:px-16 rounded">
+        <div class="sm:w-96">
           <h1 class="text-gray-800 text-2xl font-semibold py-4">Sign in to your account</h1>
           <div class="py-4">
             <Input v-model="user.name" label="Email" type="email"/>
