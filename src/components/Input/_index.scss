@@ -1,12 +1,6 @@
 .input{
-  &_group{
-    
-  }
   &_label{
     @apply flex justify-between pb-2 text-sm w-full;
-    &-main{
-
-    }
     &-alt{
       @apply text-primary;
     }
