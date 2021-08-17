@@ -1,12 +1,14 @@
 <template>
   <div>
-    <ul class="flex space-x-4 border-b">
+    <ul class="flex space-x-5 border-b">
       <li v-for="(tab, index) in tabs" :key="index" @click="selectedIndex = tab.props.index"
-        :class="['py-2 cursor-pointer', {'border-b-2 border-primary text-primary': selectedIndex == tab.props.index }]">
+        :class="['py-2 cursor-pointer text-gray-600 text-sm', {'border-b-2 border-primary text-primary': selectedIndex == tab.props.index }]">
         {{ tab.props.title }} 
       </li>
     </ul>
-    <slot></slot>
+    <div class="py-4">
+      <slot />
+    </div>
   </div>
 </template>
 <script>
@@ -18,7 +20,7 @@ export default defineComponent({
   },
   setup(props, {slots}) {
     const tabs = slots.default()
-    const selectedIndex = ref(tabs[0].props.index)
+    const selectedIndex = ref(tabs[1].props.index)
 
     provide('selectedIndex', selectedIndex)
     return {
