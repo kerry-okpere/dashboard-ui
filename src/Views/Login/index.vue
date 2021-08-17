@@ -1,11 +1,20 @@
 <template>
-  <section class="h-screen w-full bg relative sm:border-l sm:border-r sm:border-dashed">
+  <section class="h-screen w-full bg relative">
+    <div class="relative w-39/50 mx-auto sm:border-l sm:border-r h-screen">
+      <div class="px-24 w-8/12 sm:w-530 mx-auto sm:border-l sm:border-r sm:border-dashed h-screen">
+        <div class="fixed left-0 top-535">
+          <img src="../../assets/img/line-2.svg" class="ml-6 -mb-18">
+          <img src="../../assets/img/line-1.svg">
+        </div>
+        <img class="fixed right-0 top-64" src="../../assets/img/line-3.svg">
+      </div>
+    </div>
     <div class="fixed inset-0 flex items-center justify-center">
-      <div>
-        <img src="../../assets/img/vector.svg" alt="logo" class=" sm:pb-12"/>
-        <form @submit.prevent="handleSubmit"  class="sm:shadow-secondary sm:bg-white sm:py-12 sm:px-16 rounded">
+      <div class="w-full px-6 sm:w-auto sm:px-0">
+        <img src="../../assets/img/vector.svg" alt="logo" class="pl-4 pb-4 sm:pb-12"/>
+        <form @submit.prevent="handleSubmit"  class="shadow-secondary bg-white p-6 sm:py-12 sm:px-18 rounded">
           <div class="sm:w-96">
-            <h1 class="text-gray-800 text-2xl font-semibold py-4">Sign in to your account</h1>
+            <h1 class="text-gray-700 text-2xl font-semibold py-4">Sign in to your account</h1>
             <div class="py-4">
               <Input v-model="user.name" label="Email" type="email"/>
             </div>
@@ -16,9 +25,7 @@
             <Checkbox class="py-4" v-model="user.agree">
               <p class="font-normal text-sm">Stay signed in for a week</p>
             </Checkbox>
-
             <Button class="my-4 w-full" @click="$router.push('/payments')">Continue</Button>
-
             <Link title="Use single sign-on (SSO) instead" class="block text-center py-4" />
           </div>
         </form>
@@ -70,5 +77,6 @@ export default defineComponent({
 .bg{
   background-image: url('../../assets/img/grey-bg.svg');
   background-repeat: no-repeat;
+  background-position: top;
 }
 </style>
