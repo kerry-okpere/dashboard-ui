@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#635CFF',
+        secondary: '#5469D4',
         'green-60': '#CBF4C9',
         'green-70': '#0E6245'
       }
@@ -21,7 +22,23 @@ module.exports = {
       none: 'none',
       primary: '0px 2px 5px rgba(60, 66, 87, 0.08), 0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12)',
       secondary: '0px 5px 15px rgba(0, 0, 0, 0.12), 0px 15px 35px rgba(60, 66, 87, 0.08);'
-    }
+    },
+    fontSize: {
+      'xxs': '.6888rem',
+      'xs': '.75rem',
+      'xsm': '.814rem',
+      'sm': '.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
+      '2.5xl': '1.75rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+     }
   },
   variants: {
     extend: {},
