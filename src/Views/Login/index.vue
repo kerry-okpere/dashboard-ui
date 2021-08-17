@@ -30,12 +30,14 @@
           </div>
         </form>
 
-        <p class="text-sm text-gray-700 py-4">Don’t have an account? <Link title="Sign up" /></p>
-        <ul class="list-disc flex w-full space-x-7 text-sm text-gray-600 py-2">
-          <li class="list-none">© Stripe</li>
-          <li>Contact</li>
-          <li>Privacy &amp; terms</li>
-        </ul>
+        <p class="text-sm text-gray-700 pt-6 pb-2">Don’t have an account? <Link title="Sign up" /></p>
+        <p class="text-sm text-gray-600 py-2 font-medium">
+          <span> © Stripe</span>
+          <span class="px-1">·</span>
+          <span>Contact</span>
+          <span class="px-1">·</span>
+          <span>Privacy &amp; terms</span>
+        </p>
       </div>
     </div>
   </section>
