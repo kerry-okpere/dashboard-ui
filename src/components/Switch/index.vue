@@ -3,7 +3,7 @@
     <input type="checkbox" :checked="modelValue" @change="$emit('update:modelValue', $event.target.checked)">
     <span :class="['switch_button', {'switch_button-active': modelValue}]">
     </span>
-    <span :class="[modelValue ? 'text-secondary font-semibold' : 'text-gray-700']">
+    <span v-if="title" :class="[modelValue ? 'text-secondary font-semibold' : 'text-gray-700']">
       {{title}}
     </span>
   </label>

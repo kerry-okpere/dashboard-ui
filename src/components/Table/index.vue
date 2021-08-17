@@ -16,8 +16,8 @@
         <td class="py-2.5"><Checkbox v-model="data.selected"/></td>
         <td class="text-sm text-gray-900">
           <div class="flex items-center">
-            <span class="mr-3 text-right w-4/12">{{currency}}{{data.amount}}</span>
-            <Badge :title="data.status" class="w-2/5"/>
+            <span class="mr-4 xl:mr-3 text-right w-4/12">{{currency}}{{data.amount}}</span>
+            <Badge :title="data.status" class="lg:w-11/20 xl:w-9/20"/>
           </div>
         </td>
         <td class="text-xsm text-gray-500 font-normal text-left w-6/12">{{data.desc}}</td>
