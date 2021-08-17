@@ -1,6 +1,6 @@
 <template>
   <button :class="[
-    'rounded-md flex items-center', 
+    'rounded-md flex items-center justify-center', 
     isSmall ? 'py-1 px-3 text-sm' : 'py-3 px-4',
     type == 'solid' ? `bg-${variant}` : 'bg-white shadow-primary' ,
     {'cursor-not-allowed': disabled},
