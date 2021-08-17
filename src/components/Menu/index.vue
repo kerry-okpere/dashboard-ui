@@ -8,28 +8,28 @@
     <nav class="py-6">
       <Group>
         <Item title="Home" route="/">
-          <Home/>
+          <Home :is-active="$route.path === '/'" />
         </Item>
       </Group>
 
       <Group>
         <Item title="Payments" route="/payments" 
           :links="['Reviews', 'Disputes', 'Top-ups', 'Collected fees', 'Transfers', 'Payouts', 'All transactions']">
-          <Payment />
+          <Payment :is-active="$route.path === '/payments'"/>
         </Item>
-        <Item title="Balances" route="/balances"><Balances /></Item>
-        <Item title="Customers" route="/customers"><Customer /></Item>
-        <Item title="Connected accounts" route="/accounts"><Accounts /></Item>
-        <Item title="Products" route="/products"><Product /></Item>
-        <Item title="Reports" route="/reports"><Reports /></Item>
+        <Item title="Balances" route="/balances"><Balances :is-active="$route.path === '/balances'"/></Item>
+        <Item title="Customers" route="/customers"><Customer :is-active="$route.path === '/customers'"/></Item>
+        <Item title="Connected accounts" route="/accounts"><Accounts :is-active="$route.path === '/accounts'"/></Item>
+        <Item title="Products" route="/products"><Product :is-active="$route.path === '/products'"/></Item>
+        <Item title="Reports" route="/reports"><Reports :is-active="$route.path === '/reports'"/></Item>
       </Group>
 
       <Group>
-        <Item title="Developers" route="/developers"><Payment /></Item>
+        <Item title="Developers" route="/developers"><Payment :is-active="$route.path === '/developers'"/></Item>
         <div class="py-1">
           <Switch v-model="on" title="View test data" />
         </div>
-        <Item title="Settings" route="/settings"><Settings /></Item>
+        <Item title="Settings" route="/settings"><Settings :is-active="$route.path === '/settings'"/></Item>
       </Group>
     </nav>
   </section>
