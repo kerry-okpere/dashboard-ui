@@ -25,7 +25,7 @@
           <div class="truncate w-40">{{data.customer}}</div>
         </td>
         <td class="text-sm font-normal">{{data.date}}</td>
-        <td><DotsHorizontalIcon class="h-4 w-4"/></td>
+        <td><Options /></td>
       </tr>
     </tbody>
   </table>
@@ -48,14 +48,14 @@ import { defineComponent, watch, ref } from 'vue'
 import Checkbox from '@/components/Checkbox/index.vue'
 import Badge from '@/components/Badge/index.vue'
 import Button from '@/components/Button/index.vue'
-import { DotsHorizontalIcon } from '@heroicons/vue/solid';
+import Options from '@/components/Options/index.vue'
 
 export default defineComponent({
   components: {
     Checkbox,
     Badge,
     Button,
-    DotsHorizontalIcon
+    Options
   },
   props: {
     dataTable: {
