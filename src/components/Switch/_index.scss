@@ -1,0 +1,19 @@
+.switch{
+  @apply flex items-center align-middle select-none cursor-pointer text-sm;
+  input[type="checkbox"]{
+    @apply opacity-0 absolute w-px h-px hidden;
+  }
+  &_button{
+    @apply inline-block h-5 rounded-xl w-8 border bg-gray-20 border-gray-30 relative transition-all duration-300 mr-1.5;
+    &::after{
+      content: "";
+      @apply absolute w-5 h-5 rounded-full transform translate-x-0 -top-px -left-px transition-all bg-white border border-gray-10;
+    }
+  }
+  &_button-active{
+    @apply bg-primary border-tertiary;
+    &::after{
+      @apply left-3 border-tertiary;
+    }
+  }
+}
