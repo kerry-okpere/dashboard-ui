@@ -65,12 +65,14 @@ export default defineComponent({
   },
   setup(props) {
     const currency = 'US$'
-    const selectAll = false
+    const selectAll = ref(false)
     const currentPage = ref(0)
     
-    // watch(() => {
-    //   // if selectAll is true update all data selected = true 
-    // })
+    watch(selectAll, (newVal) => {
+      props.dataTable.forEach(row => {
+        row.selected = newVal
+      });
+    })
     return {
       currency,
       selectAll,
